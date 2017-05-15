@@ -45,3 +45,21 @@ indices
   90%    34
   99.9%  34
 ```
+
+### Wrapping with a Bash script
+
+```bash
+#!/bin/bash
+	
+	# List .log.gz files, supress ls error message if empty
+	LIST_OF_FILES=`ls *.log.gz 2>/dev/null`
+	echo "list:" $LIST_OF_FILES
+
+	# Exit if list is empty
+	if [ -z "$LIST_OF_FILES" ]; then
+		echo "EMPTY LIST. EXIT.";
+		exit 0;
+	fi
+
+	zcat $LIST_OF_FILES | egrep '^results|^indices' | ./report
+```
