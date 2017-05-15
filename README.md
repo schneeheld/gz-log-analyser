@@ -12,7 +12,7 @@ g++ report.cpp -o report
 
 **Examples**
 
-To analize a single `.gz` file
+To analize a single `.gz` file open a bash terminal, and run the following
 
 ```bash
 zcat search1.log.gz | grep -E '^results |^indices ' | ./report
