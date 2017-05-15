@@ -6,17 +6,23 @@ Gather stats on a fly from compressed .gz files without extracting these file.
 
 **Build**
 
-```g++ report.cpp -o report```
+```bash
+g++ report.cpp -o report
+```
 
 **Examples**
 
 To analize a single `.gz` file
 
-```zcat search1.log.gz | grep -E '^results |^indices ' | ./report```
+```bash
+zcat search1.log.gz | grep -E '^results |^indices ' | ./report
+```
 
 To analize all `search*.log.gz` files in a current folder
 
-```zcat search*.log.gz | grep -E '^results |^indices ' | ./report```
+```bash
+zcat search*.log.gz | grep -E '^results |^indices ' | ./report
+```
 
 ```
 results
