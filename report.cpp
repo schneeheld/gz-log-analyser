@@ -87,7 +87,6 @@ void vReport(vector<int> &v) {
 	cout << "  75%    " << vPcent(v, 75) << endl;
 	cout << "  90%    " << vPcent(v, 90) << endl;
 	cout << "  99.9%  " << vPcent(v, 99.9) << endl;
-
 }
 
 /*
@@ -104,8 +103,6 @@ int main() {
 
 	string lineInput;
 	int value;
-	size_t sum;
-
 	vector<int> vResults, vIndices;
 
 	// Read shell input word-by-word
@@ -117,16 +114,16 @@ int main() {
 		switch (string_hash(lineInput)) {
 
 		case results_code:
-			vResults.push_back(value);
-			break;
+		vResults.push_back(value);
+		break;
 
 		case indices_code:
-			vIndices.push_back(value);
-			break;
+		vIndices.push_back(value);
+		break;
 
 		default:
-			// OPTIONAL warning output here
-			break;
+		// OPTIONAL warning output here
+		break;
 		}
 	}
 
