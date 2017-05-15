@@ -23,7 +23,7 @@ enum string_code {
 /*
  * Keyword hashing function
  */
-string_code string_hash(std::string const& inString) {
+string_code string_hash(string const& inString) {
 	if (inString == RESULTS)
 		return results_code;
 	else if (inString == INDICES)
