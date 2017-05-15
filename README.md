@@ -1,4 +1,6 @@
-# gz-log-analyser - Analize data stored in gzip compressed text files 
+# gz-log-analyser
+
+## Analize data stored in gzip compressed text files 
 
 Gather stats on a fly from compressed .gz files without extracting these file.
 
@@ -7,6 +9,7 @@ Gather stats on a fly from compressed .gz files without extracting these file.
 ```g++ report.cpp -o report```
 
 **Examples**
+
 To analize a single `.gz` file
 
 ```zcat search1.log.gz | grep -E '^results |^indices ' | ./report```
